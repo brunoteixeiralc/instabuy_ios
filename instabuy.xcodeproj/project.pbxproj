@@ -14,6 +14,9 @@
 		F4E2BF331F7174A20054C4B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E2BF311F7174A20054C4B1 /* LaunchScreen.storyboard */; };
 		F4E2BF3E1F7174A20054C4B1 /* instabuyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2BF3D1F7174A20054C4B1 /* instabuyTests.swift */; };
 		F4E2BF491F7174A20054C4B1 /* instabuyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2BF481F7174A20054C4B1 /* instabuyUITests.swift */; };
+		F4E2BF571F7177910054C4B1 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2BF561F7177910054C4B1 /* GradientView.swift */; };
+		F4E2BF591F7177A50054C4B1 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2BF581F7177A50054C4B1 /* ProductCell.swift */; };
+		F4E2BF5B1F7177C30054C4B1 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2BF5A1F7177C30054C4B1 /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		F4E2BF441F7174A20054C4B1 /* instabuyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = instabuyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4E2BF481F7174A20054C4B1 /* instabuyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instabuyUITests.swift; sourceTree = "<group>"; };
 		F4E2BF4A1F7174A20054C4B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4E2BF561F7177910054C4B1 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		F4E2BF581F7177A50054C4B1 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		F4E2BF5A1F7177C30054C4B1 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 			children = (
 				F4E2BF281F7174A20054C4B1 /* AppDelegate.swift */,
 				F4E2BF2A1F7174A20054C4B1 /* ViewController.swift */,
+				F4E2BF561F7177910054C4B1 /* GradientView.swift */,
+				F4E2BF581F7177A50054C4B1 /* ProductCell.swift */,
+				F4E2BF5A1F7177C30054C4B1 /* Product.swift */,
 				F4E2BF2C1F7174A20054C4B1 /* Main.storyboard */,
 				F4E2BF2F1F7174A20054C4B1 /* Assets.xcassets */,
 				F4E2BF311F7174A20054C4B1 /* LaunchScreen.storyboard */,
@@ -264,6 +273,9 @@
 			files = (
 				F4E2BF2B1F7174A20054C4B1 /* ViewController.swift in Sources */,
 				F4E2BF291F7174A20054C4B1 /* AppDelegate.swift in Sources */,
+				F4E2BF571F7177910054C4B1 /* GradientView.swift in Sources */,
+				F4E2BF5B1F7177C30054C4B1 /* Product.swift in Sources */,
+				F4E2BF591F7177A50054C4B1 /* ProductCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
