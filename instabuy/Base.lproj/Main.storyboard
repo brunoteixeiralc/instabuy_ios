@@ -33,32 +33,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fwc-ZC-W4t">
-                            <size key="itemSize" width="196" height="155"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="fwc-ZC-W4t">
+                            <size key="itemSize" width="200" height="200"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="Hxz-Fc-QGr" customClass="ProductCell" customModule="instabuy" customModuleProvider="target">
-                                <rect key="frame" x="88" y="0.0" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="0.0" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ih5-on-gY3">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="North_Cascades" translatesAutoresizingMaskIntoConstraints="NO" id="ih5-on-gY3">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="200" id="WcY-Kq-e57"/>
+                                                <constraint firstAttribute="width" constant="200" id="ttb-x2-LC8"/>
+                                            </constraints>
                                         </imageView>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qar-RJ-5EU" customClass="GradientView" customModule="instabuy" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="170" width="200" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4C-IL-lMH">
+                                            <rect key="frame" x="-0.5" y="170" width="200" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="K9m-OE-6Gl"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </view>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="z4C-IL-lMH" secondAttribute="bottom" id="0Vw-g5-9Bc"/>
+                                    <constraint firstItem="ih5-on-gY3" firstAttribute="leading" secondItem="Hxz-Fc-QGr" secondAttribute="leading" id="4RC-Xn-Zqv"/>
+                                    <constraint firstAttribute="bottom" secondItem="z4C-IL-lMH" secondAttribute="bottom" id="7K8-Cj-gJ2"/>
                                     <constraint firstAttribute="trailing" secondItem="ih5-on-gY3" secondAttribute="trailing" id="B4O-OF-384"/>
                                     <constraint firstAttribute="bottom" secondItem="ih5-on-gY3" secondAttribute="bottom" id="DvR-4b-C9d"/>
+                                    <constraint firstItem="ih5-on-gY3" firstAttribute="top" secondItem="Hxz-Fc-QGr" secondAttribute="top" id="HPj-6O-Jci"/>
+                                    <constraint firstItem="z4C-IL-lMH" firstAttribute="leading" secondItem="Hxz-Fc-QGr" secondAttribute="leading" id="IKg-b1-GGW"/>
+                                    <constraint firstAttribute="bottom" secondItem="ih5-on-gY3" secondAttribute="bottom" id="M3g-Rj-4zZ"/>
+                                    <constraint firstItem="z4C-IL-lMH" firstAttribute="leading" secondItem="Hxz-Fc-QGr" secondAttribute="leading" id="N6J-s8-8sj"/>
+                                    <constraint firstAttribute="trailing" secondItem="ih5-on-gY3" secondAttribute="trailing" id="NMe-mv-iy6"/>
+                                    <constraint firstAttribute="trailing" secondItem="z4C-IL-lMH" secondAttribute="trailing" id="QhA-BC-mnP"/>
                                     <constraint firstItem="ih5-on-gY3" firstAttribute="leading" secondItem="Hxz-Fc-QGr" secondAttribute="leading" id="Qsw-C8-taz"/>
+                                    <constraint firstAttribute="trailing" secondItem="z4C-IL-lMH" secondAttribute="trailing" id="XIM-iA-p3B"/>
                                     <constraint firstItem="ih5-on-gY3" firstAttribute="top" secondItem="Hxz-Fc-QGr" secondAttribute="top" id="y8L-aA-a3y"/>
                                 </constraints>
-                                <size key="customSize" width="200" height="200"/>
                                 <connections>
                                     <outlet property="productImageView" destination="ih5-on-gY3" id="BdZ-uP-WeC"/>
                                 </connections>
@@ -76,4 +103,7 @@
             <point key="canvasLocation" x="578" y="116"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="North_Cascades" width="320" height="240"/>
+    </resources>
 </document>
