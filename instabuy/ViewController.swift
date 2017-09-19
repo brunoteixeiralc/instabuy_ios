@@ -7,11 +7,18 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UICollectionViewController {
+    
+    fileprivate var products: [Product]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        downloadProducts(subcategory_id: "2323") { (p) in
+            print(p)
+        }
         
         let width = collectionView!.frame.width/2
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
@@ -41,4 +48,25 @@ extension ViewController{
     }
 }
 
-
+extension ViewController{
+    
+    func downloadProducts(subcategory_id: String, completion: @escaping ([String]) -> Void) {
+        Alamofire.request(InstaRouter.products("57eec92f072d415b67c24175"))
+            .responseJSON { response in
+                
+                guard response.result.isSuccess else {
+                    print("Error while fetching products: \(String(describing: response.result.error))")
+                    completion([String]())
+                    return
+                }
+                
+                guard (response.result.value as? [String: Any]) != nil else{
+                    print("Invalid product information received from the service")
+                    completion([String]())
+                    return
+                }
+            
+                completion(["djdjd"])
+        }
+    }
+}
