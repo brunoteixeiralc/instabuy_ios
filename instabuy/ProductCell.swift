@@ -19,7 +19,7 @@ class ProductCell: UICollectionViewCell {
     
     var product: Product?{
         didSet {
-            if let p = product{
+            if product != nil{
                 productImageView.image = UIImage(named: "logo")
             }
         }
