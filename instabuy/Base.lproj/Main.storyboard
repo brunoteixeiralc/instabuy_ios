@@ -13,9 +13,14 @@
         <scene sceneID="LU5-Pp-XUq">
             <objects>
                 <navigationController id="EvH-Qn-HWZ" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nbx-eb-wV8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="nbx-eb-wV8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.45098039215686275" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="1" green="0.45098039220000002" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="wFz-S4-8z1" kind="relationship" relationship="rootViewController" id="Z9T-bF-dnQ"/>
@@ -25,7 +30,7 @@
             </objects>
             <point key="canvasLocation" x="-257" y="116"/>
         </scene>
-        <!--View Controller-->
+        <!--Produtos disponíveis-->
         <scene sceneID="3bz-Na-KIh">
             <objects>
                 <collectionViewController id="wFz-S4-8z1" customClass="ViewController" customModule="instabuy" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,6 +38,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="0.45098039220000002" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="fwc-ZC-W4t">
                             <size key="itemSize" width="200" height="200"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -96,7 +102,7 @@
                             <outlet property="delegate" destination="wFz-S4-8z1" id="g2F-7O-FHa"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="uqv-Iv-AO5"/>
+                    <navigationItem key="navigationItem" title="Produtos disponíveis" id="uqv-Iv-AO5"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4FS-pN-nTw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
