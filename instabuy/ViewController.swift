@@ -16,6 +16,8 @@ class ViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.showDialog()
+        
         downloadProducts(subcategory_id: "57eec92f072d415b67c24175") { (ps) in
             self.products = ps
             self.collectionView?.reloadData()
@@ -49,6 +51,22 @@ extension ViewController{
 
 extension ViewController{
     
+    func showDialog(){
+        let alert = UIAlertController(title: nil, message: "Carregando...", preferredStyle: .alert)
+        
+        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        loadingIndicator.startAnimating();
+        
+        alert.view.addSubview(loadingIndicator)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func dismissDialog(){
+        dismiss(animated: false, completion: nil)
+    }
+    
     func downloadProducts(subcategory_id: String, completion: @escaping ([Product]) -> Void) {
         Alamofire.request(InstaRouter.products(subcategory_id))
             .responseJSON { response in
@@ -80,6 +98,8 @@ extension ViewController{
                 }
                 
                 completion(products)
+                
+                self.dismissDialog()
         }
     }
 }
