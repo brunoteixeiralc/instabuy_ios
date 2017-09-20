@@ -32,16 +32,18 @@ class Product {
   var name: String
   var brand: String
   var thumb: String
-  
-  init(id: String, name: String, brand: String, thumb: String) {
+  var price:Double
+    
+    init(id: String, name: String, brand: String, thumb: String, price: Double) {
     self.id = id
     self.name = name
     self.brand = brand
     self.thumb = thumb
+    self.price = price
   }
   
   convenience init(copying product: Product) {
-    self.init(id: product.id, name: product.name, brand: product.brand, thumb: product.thumb)
+    self.init(id: product.id, name: product.name, brand: product.brand, thumb: product.thumb, price: product.price)
   }
   
 }

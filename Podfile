@@ -6,6 +6,7 @@ target 'instabuy' do
   use_frameworks!
 
   # Pods for instabuy
-   pod 'Alamofire', '~> 4.2.0'
+   pod 'Alamofire', '~> 4.5'
+   pod 'AlamofireImage', '~> 3.3'
 
 end

@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import AlamofireImage
+import Alamofire
 
 class ProductCell: UICollectionViewCell {
     
+    static let baseURLPath = "https://s3-us-west-2.amazonaws.com/"
     
     @IBOutlet weak var productImageView: UIImageView!
+    @IBOutlet weak var productLabel: UILabel!
+    @IBOutlet weak var productSubLabel: UILabel!
+    @IBOutlet weak var productPrice: UILabel!
     
     override func prepareForReuse() {
         productImageView.image = nil
@@ -20,9 +26,32 @@ class ProductCell: UICollectionViewCell {
     var product: Product?{
         didSet {
             if product != nil{
-                productImageView.image = UIImage(named: "logo")
+                productLabel.text = product?.name
+                productSubLabel.text = product?.brand
+                productPrice.text = formatCurrency(value: product!.price)
+                
+                Alamofire.request(ProductCell.baseURLPath + "ib.image.medium/m-\(String(describing: product!.thumb))").response { response in
+                    if let data = response.data {
+                        let image = UIImage(data: data)
+                        self.productImageView.image = image
+                    } else {
+                        print("Data is nil.")
+                    }
+                }
             }
         }
+    }
+}
+
+extension ProductCell{
+    
+    func formatCurrency(value: Double) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.maximumFractionDigits = 2
+        formatter.locale = Locale(identifier: Locale.current.identifier)
+        let result = formatter.string(from: value as NSNumber)
+        return result!
     }
     
 }
